@@ -1,0 +1,7 @@
+.incu-destacados card{  
+    height: 100%;
+}
+.incu-destacados .card img{
+    height: 200px;
+    object-fit: cover;
+}
