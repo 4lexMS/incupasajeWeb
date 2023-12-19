@@ -9,32 +9,63 @@
         <link rel="stylesheet" href="../static/ccs/principal.css" type="text/css"/>
 
     </head>
+
     <body>
 
         <nav class="navbar bg-dark">
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="#">
-                    <img src="https://conave.org/wp-content/uploads/2018/07/incupasaje.png" alt="Logo" width="190" height="55">
+                <a class="navbar-brand" th:href="@{/}">
+                    <img src="https://conave.org/wp-content/uploads/2018/07/incupasaje.png" alt="Logo" width="160" height="45">
                 </a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="BUSQUEDA" aria-label="Search">
-                    <button class="btn btn-danger" type="submit">IR</button>
-                </form>
+                
             </div>
         </nav>
 
-        <div class="container mt-4 incu-destacados">
-            <div class="row">
-                <div th:each="modulounit :${modulo}"class="col-md-3">
-                    <div class="card" >
-                        <img th:src="${modulounit.imagen}" class="card-img-top" alt="...">
+        <div class="container mt-3 incu-destacados">
+            <div class="row" >
+                <div class="col-md-3">
+                    <div class="card mt-2" >
+                        <img src="img/INFORMACION.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 th:text="${modulounit.nombre}" class="card-title"></h5>
-                            <p th:text ="${modulounit.descripcion}" class="card-text"></p>
-                            <a href="#" class="btn btn-warning">DETALLE</a>
+                            <h5  class="card-title">INCUPASAJE</h5>
+                            <p class="card-text">La empresa Incupasaje Cia. Ltda. se dedica a explotación de criaderos de pollos y reproducción de aves de corral, pollos y gallinas (aves de la especie COBB 500</p>
+                            <a  th:href ="@{/informacion}" class="btn btn-warning"> INFORMACIÓN </a>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="col-md-3 ">
+                    <div class="card mt-2" >
+                        <img src="https://guillermoli.com.pe/uploads/shares/Servicio/granja/caracteristicas/foto.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5  class="card-title">TRABAJA CON NOSOTROS</h5>
+                            <p class="card-text">Si quieres ser parte del mejor equipo de trabajo, postula con nosotros, envía tu hoja de vida al correo electrónico procesos@incupasaje.net y podras ser parte de Incupasaje</p>
+                            <a  th:href ="@{/postulate}" class="btn btn-warning"> POSTULATE </a>
+                        </div>
+                    </div>
 
+                </div>
+                
+                 <div class="col-md-3 ">
+                    <div class="card mt-2" >
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOxeKJ6rLUrT2NEr73ZGFaUF6ixj0RlkceDwnkzBH9p7wn3fJgF0gRARJ5GsnpHpT20s&usqp=CAU" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5  class="card-title">INCUPASAJE EN ECUADOR</h5>
+                            <p class="card-text">La empresa Incupasaje Cia. Ltda. se dedica a explotación de criaderos de pollos y reproducción de aves de corral, pollos y gallinas (aves de la especie COBB 500</p>
+                            <a  th:href ="@{/granjas}" class="btn btn-warning"> GRANJAS </a>
+                        </div>
+                    </div>
 
+                </div>
+                
+                 <div class="col-md-3 ">
+                    <div class="card mt-2" >
+                        <img src="img/CONTACTO.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5  class="card-title">UBICACIÓN Y CONTACTO</h5>
+                            <p class="card-text">La empresa Incupasaje Cia. Ltda. se dedica a explotación de criaderos de pollos y reproducción de aves de corral, pollos y gallinas (aves de la especie COBB 500</p>
+                            <a  th:href ="@{/contacto}" class="btn btn-warning"> CONTACTO </a>
                         </div>
                     </div>
 
@@ -43,10 +74,8 @@
 
             </div>
         </div>
-
-
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
+
 </html>
 
