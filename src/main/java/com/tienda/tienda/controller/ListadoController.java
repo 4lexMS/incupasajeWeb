@@ -1,6 +1,5 @@
 package com.tienda.tienda.controller;
 
-import com.tienda.tienda.domain.Ciudad;
 import com.tienda.tienda.domain.Granja;
 import java.util.List;
 import org.springframework.stereotype.Controller;
